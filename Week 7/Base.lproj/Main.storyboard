@@ -1,23 +1,114 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4451" systemVersion="13A461" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4457.6" systemVersion="12E55" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3676"/>
+        <deployment defaultVersion="1792" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3682.6"/>
     </dependencies>
     <scenes>
-        <!--class Prefix:identifier View Controller-->
+        <!--View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
                 <viewController id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS" customClass="UIControl">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="First Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="V6e-g9-Bae">
+                                <rect key="frame" x="20" y="176" width="280" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Last Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5mU-uY-Kvy">
+                                <rect key="frame" x="20" y="214" width="280" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Ee-ip-fZr">
+                                <rect key="frame" x="227" y="247" width="73" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="73" id="EPE-uG-Gjp"/>
+                                    <constraint firstAttribute="height" constant="43" id="xF6-4g-4Mf"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Save">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="saveBtn:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="8xu-wZ-fXb"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Foy-K0-I6c">
+                                <rect key="frame" x="0.0" y="298" width="320" height="270"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="270" id="Lyp-TG-Y8B"/>
+                                </constraints>
+                                <string key="text">This text View can be hidden by changing the toggle switch in the Settings App, under Week 7. This App was built with XCode 5 using IOS SDK 7.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Default Preferences" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pSr-RI-E9f">
+                                <rect key="frame" x="20" y="147" width="143" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="5mU-uY-Kvy" firstAttribute="leading" secondItem="V6e-g9-Bae" secondAttribute="leading" id="4LM-hC-bcg"/>
+                            <constraint firstItem="Foy-K0-I6c" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="55X-wV-LQU"/>
+                            <constraint firstItem="Foy-K0-I6c" firstAttribute="top" secondItem="6Ee-ip-fZr" secondAttribute="bottom" constant="8" symbolic="YES" id="9Yu-9C-rJS"/>
+                            <constraint firstItem="Foy-K0-I6c" firstAttribute="centerX" secondItem="5mU-uY-Kvy" secondAttribute="centerX" id="H7Y-wv-8F5"/>
+                            <constraint firstItem="5mU-uY-Kvy" firstAttribute="trailing" secondItem="V6e-g9-Bae" secondAttribute="trailing" id="IOh-zJ-dVk"/>
+                            <constraint firstItem="V6e-g9-Bae" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="20" symbolic="YES" id="RfG-qy-juN"/>
+                            <constraint firstAttribute="trailing" secondItem="V6e-g9-Bae" secondAttribute="trailing" constant="20" symbolic="YES" id="ad6-pC-1N5"/>
+                            <constraint firstItem="V6e-g9-Bae" firstAttribute="top" secondItem="pSr-RI-E9f" secondAttribute="bottom" constant="8" symbolic="YES" id="bgK-dy-2uW"/>
+                            <constraint firstItem="6Ee-ip-fZr" firstAttribute="top" secondItem="5mU-uY-Kvy" secondAttribute="bottom" constant="8" symbolic="YES" id="hgt-0i-D0L"/>
+                            <constraint firstItem="5mU-uY-Kvy" firstAttribute="top" secondItem="V6e-g9-Bae" secondAttribute="bottom" constant="8" symbolic="YES" id="jWu-Ly-dyG"/>
+                            <constraint firstItem="pSr-RI-E9f" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="27" id="wIx-WZ-OjL"/>
+                            <constraint firstItem="pSr-RI-E9f" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" constant="32" id="xnY-8i-j2I"/>
+                            <constraint firstItem="5mU-uY-Kvy" firstAttribute="trailing" secondItem="6Ee-ip-fZr" secondAttribute="trailing" id="zCM-v9-6GK"/>
+                        </constraints>
+                        <connections>
+                            <action selector="hideKeyboard:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="PVU-KU-3cs"/>
+                        </connections>
                     </view>
+                    <extendedEdge key="edgesForExtendedLayout"/>
+                    <connections>
+                        <outlet property="firstNameTxtFld" destination="V6e-g9-Bae" id="FKp-eT-mF8"/>
+                        <outlet property="lastNameTxtFld" destination="5mU-uY-Kvy" id="XuG-BR-XQt"/>
+                        <outlet property="textView" destination="Foy-K0-I6c" id="mbW-wZ-fXM"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-173" y="-215"/>
         </scene>
     </scenes>
+    <classes>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+        <class className="ViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="hideKeyboard:"/>
+                <relationship kind="action" name="saveBtn:"/>
+                <relationship kind="outlet" name="firstNameTxtFld" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="lastNameTxtFld" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="textView" candidateClass="UITextView"/>
+            </relationships>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

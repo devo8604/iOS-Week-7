@@ -10,4 +10,13 @@
 
 @interface ViewController : UIViewController
 
+@property (nonatomic, retain) IBOutlet UITextField *firstNameTxtFld;
+@property (nonatomic, retain) IBOutlet UITextField *lastNameTxtFld;
+@property (weak, nonatomic) IBOutlet UITextView *textView;
+
+- (IBAction)hideKeyboard:(id)sender;
+- (void) showTextView;
+- (IBAction) saveBtn: (id)sender;
+
+
 @end
